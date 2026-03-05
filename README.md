@@ -18,8 +18,8 @@ There is a need for a simple, intelligent system that analyzes resume-to-job des
 
 A web-based application that:
 
-- Accepts resume text
-- Accepts job description text
+- Accepts resume text input
+- Accepts job description input
 - Extracts key skills and keywords
 - Calculates similarity score using NLP techniques
 - Identifies missing keywords
@@ -44,10 +44,14 @@ Suggested Improvements:
 ```
 ## Project Structure
 
-src/        → Core implementation of the AI matching system  
-tests/      → Unit tests for preprocessing and similarity engine  
-requirements.txt → Python dependencies  
-README.md   → Project documentation
+```
+aus-ai-job-match
+│
+├ src/              Core implementation of the AI matching system
+├ tests/            Unit tests for preprocessing and similarity engine
+├ requirements.txt  Python dependencies
+└ README.md         Project documentation
+```
 
 ---
 ## ⚙️ Tech Stack (Planned)
