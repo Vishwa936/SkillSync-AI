@@ -1,4 +1,4 @@
-# 🇦🇺 AUS AI Job Match
+# AI Job Match – Resume to Job Description Matching
 
 AI-powered resume-to-job description matching system tailored for the Australian job market using NLP and similarity scoring.
 
