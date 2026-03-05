@@ -28,7 +28,8 @@ A web-based application that:
 ---
 ## Example Output
 
-Resume: Data Analyst with Python and SQL experience  
+```
+Resume: Data Analyst with Python and SQL experience
 Job Description: Backend Engineer requiring Python, Docker, AWS
 
 Match Score: 67%
@@ -40,7 +41,7 @@ Missing Skills:
 Suggested Improvements:
 - Mention backend API development
 - Highlight database optimisation experience
----
+```
 ## Project Structure
 
 src/        → Core implementation of the AI matching system  
