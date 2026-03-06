@@ -1,3 +1,5 @@
 scikit-learn
 spacy
 streamlit
+pdfplumber
+python-docx
