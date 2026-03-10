@@ -6,9 +6,14 @@ The platform identifies matching skills, missing skills, and provides actionable
 
 ---
 🚀 **Live Demo:**  
-https://skillsync-ai-analyzer.streamlit.app
+Try the application here:
 
-AI-powered system that compares a resume with a job description and calculates a match score using NLP and LLM techniques.
+👉 https://skillsync-ai-analyzer.streamlit.app
+
+Upload/paste a resume and paste a job description to see:
+- Match score
+- Missing skills
+- AI improvement suggestions
 
 ---
 ## Problem
