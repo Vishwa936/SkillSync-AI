@@ -264,6 +264,12 @@ if analyze:
                 )
 
                 st.progress(int(score_percent))
+                if score_percent >= 80:
+                    st.success("Strong match — your resume aligns well with this role.")
+                elif score_percent >= 50:
+                    st.warning("Moderate match — adding missing skills could improve alignment.")
+                else:
+                    st.error("Low match — significant skill gaps detected.")
 
 
             with st.container(border=True):
