@@ -5,6 +5,21 @@ from src.ai.skill_extractor_llm import extract_skills_both
 from src.ai.suggestion_llm import generate_suggestions
 from src.file_parser import extract_text_from_pdf, extract_text_from_docx
 
+if "resume_text" not in st.session_state:
+    st.session_state.resume_text = ""
+
+if "job_description" not in st.session_state:
+    st.session_state.job_description = ""
+
+if "match_score" not in st.session_state:
+    st.session_state.match_score = None
+
+if "missing_skills" not in st.session_state:
+    st.session_state.missing_skills = []
+
+if "suggestions" not in st.session_state:
+    st.session_state.suggestions = []
+
 
 # ---------------- PAGE CONFIG ----------------
 
