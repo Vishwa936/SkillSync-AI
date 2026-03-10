@@ -5,6 +5,8 @@ from src.ai.skill_extractor_llm import extract_skills_both
 from src.ai.suggestion_llm import generate_suggestions
 from src.file_parser import extract_text_from_pdf, extract_text_from_docx
 
+# ---------------- SESSION STATE ----------------
+
 if "resume_text" not in st.session_state:
     st.session_state.resume_text = ""
 
@@ -139,6 +141,8 @@ with col1:
         elif uploaded_file.type == "application/vnd.openxmlformats-officedocument.wordprocessingml.document":
             resume_text = extract_text_from_docx(uploaded_file)
 
+        st.session_state.resume_text = resume_text
+
         st.success("Resume uploaded successfully")
 
 
@@ -151,6 +155,7 @@ with col1:
 
         if resume_text_manual:
             resume_text = resume_text_manual
+            st.session_state.resume_text = resume_text_manual
 
 
 # ---------- Job Description ----------
@@ -164,6 +169,10 @@ with col2:
         height=300,
         placeholder="Paste the requirements and responsibilities..."
     )
+
+    if job_text:
+        st.session_state.job_description = job_text
+
 
 st.markdown("---")
 
@@ -200,6 +209,9 @@ with btn_col2:
 
 if analyze:
 
+    resume_text = st.session_state.resume_text
+    job_text = st.session_state.job_description
+
     if resume_text and job_text:
 
         with st.spinner("🧠 SkillSync AI is analyzing your resume..."):
@@ -219,11 +231,17 @@ if analyze:
 
             suggestions = generate_suggestions(missing_skills) if missing_skills else []
 
+            # Store results
+            st.session_state.match_score = score_percent
+            st.session_state.missing_skills = missing_skills
+            st.session_state.suggestions = suggestions
+
 
         st.markdown("---")
 
         left, right = st.columns(2)
-        
+
+
         # ---------- LEFT SIDE ----------
 
         with left:
