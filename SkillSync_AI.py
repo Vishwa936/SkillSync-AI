@@ -111,7 +111,15 @@ st.markdown(
 "<p class='subtitle'>Align your resume with job requirements using AI</p>",
 unsafe_allow_html=True
 )
+st.info(
+"""
+Upload your resume and paste a job description to see:
 
+• Resume-Job Match Score  
+• Missing Skills  
+• AI Improvement Suggestions
+"""
+)
 st.markdown("---")
 
 
